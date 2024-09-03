@@ -126,33 +126,37 @@
 
     <div align="center" class="admission_form">
         <form>
-            <div>
+            <div class="adm_int">
                 <label class="label_text">Name</label>
-                <input type="text" name="">
+                <input class="input_deg" type="text" name="">
             </div>
 
-            <div>
+            <div class="adm_int">
                 <label class="label_text">Email</label>
-                <input class="inpit_deg" type="text" name="">
+                <input class="input_deg" type="text" name="">
             </div>
 
-            <div>
+            <div class="adm_int">
                 <label class="label_text">Phone</label>
-                <input type="text" name="">
+                <input class="input_deg" type="text" name="">
             </div>
 
-            <div>
+            <div class="adm_int">
                 <label class="label_text">Message</label>
-                <textarea></textarea>
+                <textarea class="input_txt"></textarea>
             </div>
 
             <div>
                 
-                <input type="submit">
+                <input class="btn btn-primary" id="submit" type="submit" value="apply">
             </div>
         </form>
 
     </div>
+
+    <footer>
+        <h3 class="footer_text">All @copyright reserved by web tech </h3>
+    </footer>
 
 </body>
 </html>
