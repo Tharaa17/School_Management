@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$password = "your_password_here";  // Replace with your actual password or leave it empty if no password
+$password = " ";  
 $db = "schoolproject";
 
 // Establish connection
@@ -15,15 +15,33 @@ if ($data === false) {
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Sanitize input to prevent SQL injection
-    $name = mysqli_real_escape_string($data, $_POST['username']);
-    $pass = mysqli_real_escape_string($data, $_POST['Password']);
+   
+    $name =  $_POST['username'];
+    $pass = $_POST['Password'];
 
-    // You may proceed with further SQL queries here, for example:
-    // $sql = "SELECT * FROM users WHERE username='$name' AND password='$pass'";
-    // $result = mysqli_query($data, $sql);
+    $sql="select * from user where username='" .$name."' AND password='" .$pass ."' ";
+    
+    $result = mysqli_query($data,$sql);
 
-    // Handle login logic here
+    $row=mysqli_fetch_array($result);
+
+    if($row["usertype"]=="student")
+    {
+       header("location:studenthome.php");
+    }
+
+    elseif($row["usertype"]=="student")
+    {
+      header("location:adminhome.php");
+    }
+
+    else
+    {
+        echo " username or password do not match";
+    }
+
+
+    
 }
 
 ?>
