@@ -24,7 +24,7 @@
            Login Form
      </center>
 
-        <form class="login_form">
+        <form action="login_check.php" method="POST"class="login_form">
            
             <div >
                <lable class="label_deg">Username</label>
