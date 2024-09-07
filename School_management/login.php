@@ -22,6 +22,19 @@
 
      <center class="title_deg">
            Login Form
+
+           <h4>
+                <?php
+
+                error_reporting(0);
+                session_start();
+                session_destroy();
+
+
+                echo $_SESSION['loginMessage'];
+                ?>
+
+            <h4>
      </center>
 
         <form action="login_check.php" method="POST" class="login_form">
