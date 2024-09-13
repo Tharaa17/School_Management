@@ -26,4 +26,4 @@ session_start();
 <body>
     <h1>Student Home</h1>
 </body>
-</htnl>
+</html>

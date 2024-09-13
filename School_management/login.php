@@ -40,12 +40,12 @@
         <form action="login_check.php" method="POST" class="login_form">
            
             <div >
-               <lable class="label_deg">Username</label>
+               <label class="label_deg">Username</label>
                <input type="text" name="username">
             </div>
 
             <div>
-               <lable class="label_deg">Password</label>
+               <label class="label_deg">Password</label>
                <input type="Password" name="Password">
             </div>
 
