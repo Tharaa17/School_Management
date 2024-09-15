@@ -3,7 +3,7 @@
 error_reporting(0); 
 session_start();
 
-$host = "localhost";
+$host = "localhost:3307";
 $user = "root";
 $password = "";  
 $db = "schoolproject";
