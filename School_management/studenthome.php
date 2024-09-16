@@ -36,7 +36,7 @@ session_start();
    <header class="header">
        <a href="">Student Dashboard</a>
        
-       <div>
+       <div class="logout">
          <a href="logout.php" class="btn btn-primary">Logout</a>
        </div>
 
