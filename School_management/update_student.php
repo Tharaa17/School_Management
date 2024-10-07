@@ -25,6 +25,23 @@ session_start();
 
       $info=$result ->fetch_assoc();
 
+      if(isset($_POST['update']))
+      {
+        $name=$_POST['name'];
+        $email=$_POST['email'];
+        $phone=$_POST['phone'];
+        $password=$_POST['password'];
+
+        $query="UPDATE user SET username='$name', email='$email' ,phone='$phone' ,password='$password' WHERE id='$id'";
+
+        $result2=mysqli_query($data,$query);
+
+        if(result2)
+        {
+            header("location:view_student.php");
+        }
+      }
+
 
    
 ?>
@@ -82,19 +99,19 @@ session_start();
             </div>
             <div>
                 <label>Email</label>
-                <input type="text" name="name" value="<?php echo "{$info['email']}";  ?>">
+                <input type="text" name="email" value="<?php echo "{$info['email']}";  ?>">
             </div>
             <div>
                 <label>Phone</label>
-                <input type="text" name="name" value="<?php echo "{$info['phone']}";  ?>">
+                <input type="text" name="phone" value="<?php echo "{$info['phone']}";  ?>">
             </div>
             <div>
                 <label>Password</label>
-                <input type="text" name="name" value="<?php echo "{$info['password']}";  ?>">
+                <input type="text" name="password" value="<?php echo "{$info['password']}";  ?>">
             </div>
             <div>
                 
-                <input class="btn btn-success" type="submit" name="update value" value="Update">
+                <input class="btn btn-success" type="submit" name="update " value="Update">
             </div>
             
         </form>
