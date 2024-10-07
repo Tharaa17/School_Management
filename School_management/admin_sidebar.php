@@ -18,7 +18,7 @@
            </li>
 
            <li>
-            <a href="">View Student</a>
+            <a href="view_student.php">View Student</a>
            </li>
 
            <li>
